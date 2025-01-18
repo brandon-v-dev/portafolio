@@ -17,13 +17,27 @@ function App() {
       </header>
       <div className='contenedor-principal'>
         <div className='btns'>
-          <button className='btn-seleccionado'>Inicio</button>
-          <button>Proyectos</button>
-          <button>Habilidades</button>
+          <button className='btn-seleccionado'>
+            <Link to='/'>
+              Inicio
+            </Link>
+          </button>
+          <button>
+            <Link to='/proyectos'>
+              Proyectos
+            </Link>
+          </button>
+          <button>
+            <Link to='habilidades'>
+              Habilidades
+            </Link>
+          </button>
         </div>
-        {/* <Proyectos /> */}
-        {/* <Inicio></Inicio> */}
-        <Habilidades />
+        <Routes>
+          <Route path='/' element={<Inicio />}></Route>
+          <Route path='/proyectos' element={<Proyectos />}></Route>
+          <Route path='/habilidades' element={<Habilidades />}/>
+        </Routes>
       </div>
     </div>
   );

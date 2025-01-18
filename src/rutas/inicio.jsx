@@ -3,7 +3,6 @@ import '../stylesheet/inicio.scss';
 export const Inicio = () => {
     return (
         <div className='seccion-sobre-mi'>
-            <h2>Sobre mí</h2>
             <p className='montserrat texto-sobre-mi'>
                 Actualmente me dedico a la construcción de interfaces bonitas, 
                 funcionales e intituivas junto a tecnologias como html, css, javascript y bibliotecas como react.

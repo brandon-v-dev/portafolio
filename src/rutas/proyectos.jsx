@@ -24,8 +24,6 @@ const proyectos = [
 export const Proyectos = () => {
   return (
     <div className='seccion-proyectos'>
-      <h2>Proyectos</h2>
-
       <div className='proyectos'>
         {proyectos.map((p) => {
           return <Proyecto key={p.nombre} nombreProyecto={p.nombre} img={p.img} link={p.link} detalles={p.detalles} />

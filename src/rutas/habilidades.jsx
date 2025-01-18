@@ -3,7 +3,7 @@ import '../stylesheet/habilidades.scss';
 export const Habilidades = () => {
   return (
     <seccion className='seccion-habilidades'>
-      <h2 className='alice'>Mis habilidades</h2>
+      {/* <h2 className='alice'>Mis habilidades</h2> */}
 
       <p className='introduccion-habilidad montserrat-bold'>
       Comprendo las bases de la programación, anteriormente he trabajado en proyectos personales y practicas con solamente html, css y js vanilla. Por lo tanto sé del dom, manipularlo y trabajar ‘nativamente’. 
