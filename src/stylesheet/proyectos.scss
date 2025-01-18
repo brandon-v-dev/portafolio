@@ -1,3 +1,18 @@
 .seccion-proyectos {
     padding: 10px;
+    max-width: 900px;
+    min-width: 150px;
+    width: 100%;
+    // background-image: url(https://w7.pngwing.com/pngs/675/57/png-transparent-shelf-furniture-plywood-shelf-angle-furniture-wood-thumbnail.png);
+    .proyecto {
+        width: 33%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .seccion-proyectos {
+        .proyecto {
+            width: 100%;
+        }
+    }
 }

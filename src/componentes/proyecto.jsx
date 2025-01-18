@@ -17,21 +17,21 @@ export const Proyecto = ({nombreProyecto, img, link, detalles}) => {
     }
   }
 
-    return (
-        <div className='proyecto'>
-          <p className='nombre-proyecto montserrat'>{nombreProyecto}</p>
-          <img src={img} alt='weather app' />
-          <span className='link-proyecto'>{link}</span>
-          <button 
-          className={`montserrat btn-detalle ${detallesAbierto ? 'detalles-abierto' : 'detalles-cerrado'}`} 
-          onClick={handleCollapse}>
+  return (
+    <div className='proyecto'>
+      <p className='nombre-proyecto montserrat'>{nombreProyecto}</p>
+      <img src={img} alt='weather app' />
+      <span className='link-proyecto'><a>{link}</a></span>
+      <button 
+      className={`montserrat btn-detalle ${detallesAbierto ? 'detalles-abierto' : 'detalles-cerrado'}`} 
+      onClick={handleCollapse}>
 
-          {detallesAbierto ? 'Cerrar' : 'ver detalles'}
+      {detallesAbierto ? 'Cerrar' : 'ver detalles'}
 
-          </button>
-          <div className='detalles' ref={refCollapse}>
-            <div className='inner'>{detalles}</div>
-          </div>
-        </div>
-    )
+      </button>
+      <div className='detalles' ref={refCollapse}>
+        <div className='inner'>{detalles}</div>
+      </div>
+    </div>
+  )
 }

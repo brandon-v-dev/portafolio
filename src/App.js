@@ -3,9 +3,12 @@ import { Habilidades } from './rutas/habilidades';
 import { Inicio } from './rutas/inicio';
 import { Proyectos } from './rutas/proyectos';
 
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link, useLocation } from 'react-router-dom';
 
 function App() {
+
+  const location = useLocation();
+
   return (
     <div className="portafolio">
       <header>
@@ -17,17 +20,17 @@ function App() {
       </header>
       <div className='contenedor-principal'>
         <div className='btns'>
-          <button className='btn-seleccionado'>
+          <button className={location.pathname === '/' ? 'btn-seleccionado' : ''}>
             <Link to='/'>
               Inicio
             </Link>
           </button>
-          <button>
+          <button className={location.pathname === '/proyectos' ? 'btn-seleccionado' : ''}>
             <Link to='/proyectos'>
               Proyectos
             </Link>
           </button>
-          <button>
+          <button className={location.pathname === '/habilidades' ? 'btn-seleccionado' : ''}>
             <Link to='habilidades'>
               Habilidades
             </Link>
