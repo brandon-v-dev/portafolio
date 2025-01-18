@@ -14,6 +14,7 @@
     img {
         width: 100%;
         border-radius: 15px;
+        box-shadow: 0px 1px 5px rgb(0, 0, 0, .6);
     }
 
     .link-proyecto {
@@ -26,16 +27,34 @@
         
     }
 
-    .btn-detalle {
-        width: 150px;
-        height: 35px;
-        border-radius: 14px;
-        border: none;
-        background-color: #d9d9d9;
-        transition: 1s;
-        font-size: 16px;
-        color: #2c2a2a;
-        cursor: pointer;
+    .btns-proyecto {
+        display: flex;
+        gap: 10px;
+        button, a {
+            width: 150px;
+            width: 50%;
+            height: 35px;
+            border-radius: 14px;
+            border: none;
+            background-color: #d9d9d9;
+            transition: 1s;
+            font-size: 16px;
+            color: #2c2a2a;
+            cursor: pointer;
+        }
+
+        a {
+            align-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            background-color: #e0a458;
+            box-shadow: 0px 1px 4px rgb(0, 0, 0, .6);
+
+        }
+
+        .btn-ir-a-proyecto {
+        }
     }
 
     .detalles {
@@ -60,5 +79,5 @@
 }
 
 .detalles-cerrado {
-    box-shadow: 0px 1px 5px rgb(0, 0, 0, .6);
+    box-shadow: 0px 1px 4px rgb(0, 0, 0, .6);
 }
