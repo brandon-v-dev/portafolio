@@ -5,8 +5,8 @@ export const Inicio = () => {
     return (
         <div className='seccion-sobre-mi'>
             <p className='montserrat texto-sobre-mi'>
-                Hola! bienvenido a mi portafolio, soy una persona nueva en el mundo del desarrollo web (junior) 
-                que cada dia trata de mejorar, estudiando de forma autodidacta y haciendo proyectos para reforzar lo aprendido.
+                Hola!, soy una persona nueva en el mundo del desarrollo de software, específicamente en el área del desarrollo web.
+                Soy autodidacta y cada dia pongo mi granito de arena para poder de mejorar. Ahora mismo soy front-end junior, pero mi proposito es ser full-stack para poder desarrollar proyectos completos.
             </p>
             <p className='montserrat texto-sobre-mi'>
                 Actualmente me dedico a la construcción de interfaces bonitas, 

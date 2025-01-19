@@ -31,9 +31,10 @@ export const Proyecto = ({nombreProyecto, img, link, detalles}) => {
         {detallesAbierto ? 'Cerrar' : 'ver detalles'}
 
         </button>
-          <a className='montserrat' href='https://weather-app-re-gilt.vercel.app/'>
-            Ir al proyecto
-          </a>
+        <a className='montserrat' href='https://weather-app-re-gilt.vercel.app/'>
+          <span>Ir al proyecto</span>
+          <img src='/imgs/iconos/icon-portafolio.svg' alt="" />
+        </a>
       </div>
       
       <div className='detalles' ref={refCollapse}>

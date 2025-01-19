@@ -1,0 +1,35 @@
+.seccion-contacto {
+    padding: 10px;
+    max-width: 900px;
+    min-width: 150px;
+    width: 100%;
+
+    .introduccion-contacto {
+        max-width: 700px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .metodos-de-contacto {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .contacto {
+            display: flex;
+            gap: 5px;
+
+            img {
+                max-width: 25px;
+            }
+
+            a {
+                
+                color: inherit;
+                align-content: center;
+
+            }
+        }
+    }
+}

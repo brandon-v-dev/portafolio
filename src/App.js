@@ -2,6 +2,7 @@ import './App.scss';
 import { Habilidades } from './rutas/habilidades';
 import { Inicio } from './rutas/inicio';
 import { Proyectos } from './rutas/proyectos';
+import { Contacto } from './rutas/contacto';
 
 import { Route, Routes, Link, useLocation } from 'react-router-dom';
 
@@ -35,11 +36,17 @@ function App() {
               Habilidades
             </Link>
           </button>
+          <button className={location.pathname === '/contacto' ? 'btn-seleccionado' : ''}>
+            <Link to='/contacto'>
+              Contacto
+            </Link>
+          </button>
         </div>
         <Routes>
           <Route path='/' element={<Inicio />}></Route>
           <Route path='/proyectos' element={<Proyectos />}></Route>
           <Route path='/habilidades' element={<Habilidades />}/>
+          <Route path='/contacto' element={<Contacto />}></Route>
         </Routes>
       </div>
     </div>
