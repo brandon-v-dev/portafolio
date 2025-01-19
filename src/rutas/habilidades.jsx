@@ -53,14 +53,16 @@ export const Habilidades = () => {
           </div>
           
           <p className='montserrat descripcion-habilidad'>
-            Redux la he usado para hacer proyectos interactivos como la weather app y evitar pasar props innecesarias.
+            Redux la he usado para hacer proyectos interactivos y evitar pasar props innecesarias.
           </p>
         </div>
 
         <div className='habilidad-contenedor'>
-          <p className='montserrat-bold tecnologia-nombre'>
-            Otros
-          </p>
+          <div className='titulo'>
+            <p className='montserrat-bold tecnologia-nombre'>
+              Otros
+            </p>
+          </div>
           <p className='montserrat descripcion-habilidad'>
             Git y Github básico. Bootstrap, sass. Recurisividad. En una ocasión usé firebase para poder tener usuarios en una app (weather app).
              Aprendo rapido;)
