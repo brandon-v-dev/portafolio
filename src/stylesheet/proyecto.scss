@@ -3,6 +3,8 @@
     flex-direction: column;
     gap: 5px;
     padding-left: 2px;
+    max-height: 280px;
+
 
     .nombre-proyecto {
         color: #2c2a2a;
@@ -11,8 +13,13 @@
         font-size: 18px;
     }
 
-    img {
+    .img_proyecto {
         width: 100%;
+        // width: 673px;
+        min-height: 180px;
+        max-height: 250px;
+        height: 100%;
+        object-fit: cover;
         border-radius: 15px;
         box-shadow: 0px 1px 5px rgb(0, 0, 0, .6);
     }

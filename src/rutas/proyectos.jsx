@@ -18,6 +18,28 @@ const proyectos = [
         <br/><br/>
         -Puedes ver el pronostico para los proximos cinco dias con una grafica que te detalla la temperatura en el transcurso del dia.
     </p>
+  },
+  {
+    nombre: 'Kanbax (app de gestion de tareas basada en kanban)',
+    img: '/imgs/kanbax.png',
+    link: 'https://kanbax.vercel.app/',
+    detalles: <p className='montserrat'>
+      Actualmente estoy trabajando en este proyecto, es un proyecto personal que me ayuda a mejorar mis habilidades en el desarrollo web.
+      <br></br>
+      Esta app esta basada en el metodo kanban, puedes crear tableros, listas y tareas.
+
+      <br/><br/>
+      -Hasta el momento puedes en cuanto a <span style={{fontWeight: 'bold'}}>tableros</span>: Crear tableros.
+      <br/><br/>
+      -En cuanto a <span style={{fontWeight: 'bold'}}>listas</span>: Copiar listas, moverlas con drag and drop o manualmente especificando en que posicion quieres mover una lista, tambien puedes cambiar su color y editar su nombre.
+      <br/><br/>
+      -En cuanto a <span style={{fontWeight: 'bold'}}>tareas</span>: Mover tareas entre listas, editar su nombre, elimianarlas, cambiar su color y marcarlas como completadas, colocarle un color de portada, modificar ese color de portada(dentro de poco podrás colocarle una imagen de portada).
+      <br></br>
+      <span style={{fontWeight: 'bold'}}>
+        Te invito a que pruebes la app y me des tu opinión. Aunque por el momento quizás no tengas una buena experiencia de usuario,
+        estoy trabajando en ello para que lo sea. Gracias por tu tiempo! :).
+      </span>
+    </p>
   }
 ];
 
@@ -33,10 +55,3 @@ export const Proyectos = () => {
     </div>
   )
 }
-
-{/* <div className='proyecto'>
-          <p className='nombre-proyecto montserrat'>Aplicación del clima(weather app).</p>
-          <img src='/imgs/img-weather-app.png' alt='weather app' />
-          <span className='link-proyecto'>https://weather-app-re-gilt.vercel.app/</span>
-          <button className='montserrat'>Ver detalles</button>
-        </div> */}

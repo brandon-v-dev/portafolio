@@ -20,7 +20,7 @@ export const Proyecto = ({nombreProyecto, img, link, detalles}) => {
   return (
     <div className='proyecto'>
       <p className='nombre-proyecto montserrat'>{nombreProyecto}</p>
-      <img src={img} alt='weather app' />
+      <img src={img} alt={img} className='img_proyecto' />
       {/* <span className='link-proyecto'><a href='https://weather-app-re-gilt.vercel.app/'>{link}</a></span> */}
       
       <div className='btns-proyecto'>
@@ -31,7 +31,7 @@ export const Proyecto = ({nombreProyecto, img, link, detalles}) => {
         {detallesAbierto ? 'Cerrar' : 'ver detalles'}
 
         </button>
-        <a className='montserrat' href='https://weather-app-re-gilt.vercel.app/'>
+        <a className='montserrat' href={link} target='_blank' rel='noreferrer'>
           <span>Ir al proyecto</span>
           <img src='/imgs/iconos/icon-portafolio.svg' alt="" />
         </a>
