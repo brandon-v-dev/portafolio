@@ -20,7 +20,7 @@ const proyectos = [
     </p>
   },
   {
-    nombre: 'Kanbax (app de gestion de tareas basada en kanban)',
+    nombre: 'Gestor de tareas basada en kanban.',
     img: '/imgs/kanbax.png',
     link: 'https://kanbax.vercel.app/',
     detalles: <p className='montserrat'>

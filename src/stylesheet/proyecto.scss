@@ -1,10 +1,10 @@
 .proyecto {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
+    flex-direction: column;  
+    gap: 8px;  
     padding-left: 2px;
-    max-height: 280px;
-
+    width: 32%;
+    max-height: 300px;
 
     .nombre-proyecto {
         color: #2c2a2a;
@@ -15,12 +15,9 @@
 
     .img_proyecto {
         width: 100%;
-        // width: 673px;
-        min-height: 180px;
-        max-height: 250px;
-        height: 100%;
         object-fit: cover;
         border-radius: 15px;
+        height: 200px;
         box-shadow: 0px 1px 5px rgb(0, 0, 0, .6);
     }
 
@@ -99,6 +96,21 @@
                 font-size: 15px;
             }
         }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .proyecto {
+        width: 49%;
+        .img_proyecto {
+            height: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .proyecto {
+        width: 100%;
     }
 }
 

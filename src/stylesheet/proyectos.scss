@@ -8,20 +8,22 @@
     // background-image: url(https://w7.pngwing.com/pngs/675/57/png-transparent-shelf-furniture-plywood-shelf-angle-furniture-wood-thumbnail.png);
     .proyectos {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         gap: 5px;
-        flex-wrap: wrap;
-        .proyecto {
-            width: 33%;
-            height: 100%;
-        }
+
+        // .proyecto {
+        //     width: 33%;
+        //     height: 100%;
+        // }
     }
 }
 
-@media screen and (max-width: 420px) {
-    .seccion-proyectos {
-        .proyecto {
-            width: 100%;
-        }
-    }
-}
+
+// @media screen and (max-width: 420px) {
+//     .seccion-proyectos {
+//         .proyecto {
+//             width: 100%;
+//         }
+//     }
+// }

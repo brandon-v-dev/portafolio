@@ -18,14 +18,11 @@ export const Habilidades = () => {
               React
             </p>
           </div>
-          <p className='montserrat descripcion-habilidad'>
-            Hace relativamente poco aprendi react y desde entonces me he dado cuenta de la importancia 
-            de dominar estas tecnologias, ya que mantienen codigo limpio y legible, haciendo más fácil escribir 
-            y reutilizar componentes.
+          <p className='montserrat descripcion-habilidad'> {/* IMPORTANTE: VENDERME MÁS PARA GANAR LA ATENCION DE RECLUTADORES*/}
+            Tengo conociemientos solidos en react, he trabajado en proyectos personales y practicas
+            con esta libreria. <span className='montserrat-medium'>Me gusta trabajar con react porque me permite </span>
+            escribir codigo limpio y escalable, ademas de que me permite crear interfaces de usuario de manera eficiente y modular.
             <br /> <br />
-            Aún me ando famiriliazando con el entorno de react, algunos de los hooks que domino son: 
-            useState, useForms, useRef, useContext, useEffect. Tambien conozco useMemo y 
-            useCallback pero hasta el momento no he visto necesario usarlos
           </p>
         </div>
 
@@ -48,12 +45,15 @@ export const Habilidades = () => {
           <div className='titulo'>
             <img src='/imgs/iconos/icon-redux.svg' alt='icono de redux' />
             <p className='montserrat-bold tecnologia-nombre'>
-              Redux toolkit
+              Redux toolkit y zustand
             </p>
           </div>
           
           <p className='montserrat descripcion-habilidad'>
-            Redux la he usado para hacer proyectos interactivos y evitar pasar props innecesarias.
+            {/* He usado zustand y redux, para hacer proyectos interactivos y evitar pasar props innecesarias. */}
+            He trabajado con redux toolkit y zustand, me gusta trabajar con zustand porque
+            me permite tener un estado global y manejarlo de forma eficiente, ademas de que me permite
+            escribir menos codigo y mantener una estructura clara en mis aplicaciones.
           </p>
         </div>
 
@@ -65,7 +65,6 @@ export const Habilidades = () => {
           </div>
           <p className='montserrat descripcion-habilidad'>
             Git y Github básico. Bootstrap, sass. Recurisividad. En una ocasión usé firebase para poder tener usuarios en una app (weather app).
-             Aprendo rapido;)
           </p>
         </div>
       </div>
