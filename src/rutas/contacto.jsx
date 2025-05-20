@@ -21,7 +21,7 @@ export const Contacto = () => {
                 </div>
                 <div className='contacto'>
                     <img src='/imgs/iconos/icon-github.svg' alt='icono email' />
-                    <a className='montserrat' href='https://github.com/s3nnin-mode'>
+                    <a className='montserrat' href='https://github.com/brandon-v-dev'>
                         Mi Github
                     </a>
                 </div>
