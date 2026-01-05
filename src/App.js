@@ -4,14 +4,44 @@ import { Inicio } from './rutas/inicio';
 import { Proyectos } from './rutas/proyectos';
 import { Contacto } from './rutas/contacto';
 
-import { Route, Routes, Link, useLocation } from 'react-router-dom';
+import { Route, Routes, Link, useLocation, NavLink } from 'react-router-dom';
 
-function App() {
+const Navbar = () => {
+
+  return (
+    <nav>
+      <ul className='montserrat-400'>
+        <li>
+          <NavLink to='/' className={({ isActive }) => isActive ? "active-link" : ""} end>
+            Inicio
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/proyectos' className={({ isActive }) => isActive ? "active-link" : ""} end> 
+            Proyectos
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to='/habilidades' className={({ isActive }) => isActive ? "active-link" : ""} end>
+            Habilidades
+          </NavLink>  
+        </li>
+        <li>
+          <NavLink to='/contacto' className={({ isActive }) => isActive ? "active-link" : ""} end>
+            Contacto
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  )
+}
+
+export const App = () => {
 
   const location = useLocation();
 
   return (
-    <div className="portafolio">
+    <main className="portafolio">
       <header>
         <div className='foto'>
           foto
@@ -19,29 +49,10 @@ function App() {
         <p className='alice-regular mi-nombre'>Brandon Leyder</p>
         <p className='alice-regular descripcion'>Desarrollador web jr</p>
       </header>
+      <Navbar>
+        
+      </Navbar>
       <div className='contenedor-principal'>
-        <div className='btns'>
-          <button className={location.pathname === '/' ? 'btn-seleccionado' : ''}>
-            <Link to='/'>
-              Inicio
-            </Link>
-          </button>
-          <button className={location.pathname === '/proyectos' ? 'btn-seleccionado' : ''}>
-            <Link to='/proyectos'>
-              Proyectos
-            </Link>
-          </button>
-          <button className={location.pathname === '/habilidades' ? 'btn-seleccionado' : ''}>
-            <Link to='habilidades'>
-              Habilidades
-            </Link>
-          </button>
-          <button className={location.pathname === '/contacto' ? 'btn-seleccionado' : ''}>
-            <Link to='/contacto'>
-              Contacto
-            </Link>
-          </button>
-        </div>
         <Routes>
           <Route path='/' element={<Inicio />}></Route>
           <Route path='/proyectos' element={<Proyectos />}></Route>
@@ -49,8 +60,6 @@ function App() {
           <Route path='/contacto' element={<Contacto />}></Route>
         </Routes>
       </div>
-    </div>
+    </main>
   );
 }
-
-export default App;
