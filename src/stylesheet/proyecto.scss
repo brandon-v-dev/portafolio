@@ -131,20 +131,27 @@
         width: 50%;
 
         .titulo {
-            font-size: 1rem;
+            // font-size: 1rem;
+            margin: 0.5rem 0;
         }
 
-        .descripcion {
-            font-size: 0.9rem;
-        }
+        .descripcion-contenedor {
 
+            p {
+                font-size: 1rem;            /* 17px - 18px aproximadamente */
+                line-height: 1.65;            /* Clave: un interlineado generoso facilita la lectura */
+                letter-spacing: 0.01em;       /* Un toque extra de espacio para que no se amontone */
+                margin-bottom: 1.25rem;
+                text-align: left;
+            }
+        }
     }
 
     .img-wrapper {
         width: 50%;
         border-radius: 20px;
         overflow: hidden;
-        border: 1px solid;
+        // border: 1px solid;
 
         img {
             width: 100%;

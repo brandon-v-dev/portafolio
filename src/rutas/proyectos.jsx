@@ -1,29 +1,26 @@
 import { Proyecto } from '../componentes/proyecto';
 import '../stylesheet/proyectos.scss';
+import weatherAppMockup from '../assets/proyectos/weatherApp/weather-app-shot2.png';
+      // -Puedes ver el pronostico para los proximos cinco dias con una grafica que te detalla la temperatura en el transcurso del dia.
 
 const proyectos = [
   {
     nombre: 'Aplicación del clima(weather app).',
-    img: '/imgs/img-weather-app.png',
+    mockups: [
+      weatherAppMockup
+    ],
     link: 'https://weather-app-re-gilt.vercel.app/',
-    detalles: <p className='montserrat'>
-      Mi primer app y proyecto medianamente grande, cuenta con las funciones más importantes que cualquier
-      app del clima necesita tener como:
-      <br/><br/>
-        - Guardar y cambiar tu localidad para acceder de forma predeterminada, 
-        tanto si usas la app con una cuenta registrada o sin resgistrarte(Te puedes registrar).
+    descripcion: <p>
+        Aplicación del clima, si te registras o no, da igual. La app permite usarla asi, sin más.
+        Si te resgistras tus datos se almacenan en tu cuenta, de lo contrario se almacenan en tu dispositivo(localstorage).
         <br/><br/>
-        -Funciona sin registrarse. Si te resgistras tus datos se almacenan en tu cuenta, 
-        de lo contrario se almacenan en tu dispositivo(localstorage).
-        <br/><br/>
-        -Puedes ver el pronostico para los proximos cinco dias con una grafica que te detalla la temperatura en el transcurso del dia.
-    </p>
+      </p>
   },
   {
     nombre: 'Gestor de tareas basada en kanban.',
-    img: '/imgs/kanbax.png',
+    mockups: [],
     link: 'https://kanbax.vercel.app/',
-    detalles: <p className='montserrat'>
+    descripcion: <p>
       Actualmente estoy trabajando en este proyecto, es un proyecto personal que me ayuda a mejorar mis habilidades en el desarrollo web.
       <br></br>
       Esta app esta basada en el metodo kanban, puedes crear tableros, listas y tareas.
@@ -46,11 +43,18 @@ const proyectos = [
 export const Proyectos = () => {
   return (
     <div className='seccion-proyectos'>
-      <h2>Mis proyectos</h2>
+      <h1 className='seccion-titulo alice-regular'>Mis proyectos</h1>
       <div className='proyectos'>
-        {proyectos.map((p) => {
-          return <Proyecto key={p.nombre} nombreProyecto={p.nombre} img={p.img} link={p.link} detalles={p.detalles} />
-        })}
+        {proyectos.map((p, index) => 
+          <Proyecto 
+            key={p.nombre} 
+            nombreProyecto={p.nombre} 
+            mockups={p.mockups} 
+            link={p.link} 
+            descripcion={p.descripcion} 
+            className={index % 2 ? 'inverse' : ''}
+          />
+        )}
       </div>
     </div>
   )

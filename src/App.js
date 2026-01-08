@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <ul className='montserrat-400'>
+      <ul className='libre-franklin-regular'>
         <li>
           <NavLink to='/' className={({ isActive }) => isActive ? "active-link" : ""} end>
             Inicio

@@ -44,7 +44,7 @@ import '../stylesheet/proyecto.scss';
 //   )
 // }
 
-export const Proyecto = ({nombreProyecto, img, link, detalles}) => {
+export const Proyecto = ({nombreProyecto, mockups, link, descripcion, detalles, className}) => {
   const [detallesAbierto, setDetallesAbierto] = useState(false);
   const refCollapse = useRef(null);
 
@@ -61,17 +61,24 @@ export const Proyecto = ({nombreProyecto, img, link, detalles}) => {
   }
 
   return (
-    <article className='proyecto'>
+    <article className={`proyecto ${className}`}>
       <div className='text'>
-        <h1 className='titulo'>{nombreProyecto}</h1>
-        <div className='descripcion'>
-          {detalles}
+        <h2 className='titulo alice-regular'>
+          {nombreProyecto}
+        </h2>
+        <div className='descripcion-contenedor libre-franklin-regular'>
+          {descripcion}
         </div>
+        <button className='btn-abrir-detalles'>
+          Detalles
+        </button>
       </div>
       <div className='img-wrapper'>
-        <img 
-          src={img}
-        />
+        {mockups.map(m => 
+          <img 
+            src={m}
+          />
+        )}
       </div>
     </article>
   )

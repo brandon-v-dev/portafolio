@@ -4,7 +4,12 @@
     min-width: 150px;
     width: 100%;
     min-height: 100vh;
-    border: 1px solid;
+
+    .seccion-titulo {
+        text-align: center;
+        // margin: 1rem auto;
+        margin-bottom: 1.5em;
+    }
     
     .proyectos {
         // border: 1px solid;
