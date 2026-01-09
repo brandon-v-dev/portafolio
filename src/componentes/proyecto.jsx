@@ -1,77 +1,55 @@
-import { useRef, useState } from 'react';
+import { forwardRef, useRef, useState } from 'react';
 import '../stylesheet/proyecto.scss';
 
-// export const Proyecto = ({nombreProyecto, img, link, detalles}) => {
-//   const [detallesAbierto, setDetallesAbierto] = useState(false);
-//   const refCollapse = useRef(null);
+const ModalDetalles = forwardRef(({id, cerrar, nombreProyecto, detalles}, ref) => {
 
-//   const handleCollapse = () => {
-//     setDetallesAbierto(!detallesAbierto);
-//     const isDetallesAbierto = !detallesAbierto;
-//     const detalles = refCollapse.current;
+  return (
+    <dialog ref={ref} id={id}>
+      <header>
+        <h1>
+          {nombreProyecto}
+        </h1>
+      </header>
+      {id}
+      <button onClick={cerrar}>cerrar</button>
+    </dialog>
+  )
+});
 
-//     if (isDetallesAbierto) {
-//       detalles.style.gridTemplateRows = '1fr'
-//     } else {
-//       detalles.style.gridTemplateRows = '0fr';
-//     }
-//   }
+export const Proyecto = ({id, nombreProyecto, mockups, link, descripcion, detalles, className}) => {
+  const dialogRef = useRef(null);
 
-//   return (
-//     <div className='proyecto'>
-//       <p className='nombre-proyecto montserrat'>{nombreProyecto}</p>
-//       <img src={img} alt={img} className='img_proyecto' />
-//       {/* <span className='link-proyecto'><a href='https://weather-app-re-gilt.vercel.app/'>{link}</a></span> */}
-      
-//       <div className='btns-proyecto'>
-//         <button 
-//         className={`montserrat btn-detalle ${detallesAbierto ? 'detalles-abierto' : 'detalles-cerrado'}`} 
-//         onClick={handleCollapse}>
+  const abrirModal = () => {
+    dialogRef.current.showModal();
+  }
 
-//         {detallesAbierto ? 'Cerrar' : 'ver detalles'}
-
-//         </button>
-//         <a className='montserrat' href={link} target='_blank' rel='noreferrer'>
-//           <span>Ir al proyecto</span>
-//           <img src='/imgs/iconos/icon-portafolio.svg' alt="" />
-//         </a>
-//       </div>
-      
-//       <div className='detalles' ref={refCollapse}>
-//         <div className='inner'>{detalles}</div>
-//       </div>
-//     </div>
-//   )
-// }
-
-export const Proyecto = ({nombreProyecto, mockups, link, descripcion, detalles, className}) => {
-  const [detallesAbierto, setDetallesAbierto] = useState(false);
-  const refCollapse = useRef(null);
-
-  const handleCollapse = () => {
-    setDetallesAbierto(!detallesAbierto);
-    const isDetallesAbierto = !detallesAbierto;
-    const detalles = refCollapse.current;
-
-    if (isDetallesAbierto) {
-      detalles.style.gridTemplateRows = '1fr'
-    } else {
-      detalles.style.gridTemplateRows = '0fr';
-    }
+  const cerrarModal = () => {
+    dialogRef.current.close();
   }
 
   return (
     <article className={`proyecto ${className}`}>
       <div className='text'>
-        <h2 className='titulo alice-regular'>
-          {nombreProyecto}
-        </h2>
-        <div className='descripcion-contenedor libre-franklin-regular'>
-          {descripcion}
+        <div className='wrapper'>
+          <h2 className='titulo alice-bold'>
+            {nombreProyecto}
+          </h2>
+          <div className='descripcion-contenedor source-sans-3-regular'>
+            {descripcion}
+          </div>
         </div>
-        <button className='btn-abrir-detalles'>
-          Detalles
-        </button>
+        
+        <footer>
+          <button 
+            className='btn-abrir-detalles source-sans-3-semibold'
+            onClick={abrirModal}
+          >
+            Detalles
+          </button>
+          <button className='btn-ir-al-proyecto source-sans-3-semibold'>
+            Ir al proyecto
+          </button>
+        </footer>
       </div>
       <div className='img-wrapper'>
         {mockups.map(m => 
@@ -80,6 +58,14 @@ export const Proyecto = ({nombreProyecto, mockups, link, descripcion, detalles, 
           />
         )}
       </div>
+
+      <ModalDetalles 
+        ref={dialogRef}
+        id={id}
+        cerrar={cerrarModal}
+        nombreProyecto={nombreProyecto}
+        detalles={detalles}
+      />
     </article>
   )
 }

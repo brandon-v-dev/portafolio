@@ -126,32 +126,65 @@
 
 .proyecto {
     display: flex;
+    border: 1px solid rgb(128, 128, 128, .3);
+    border-radius: 14px;
+    padding: 1em;
+    background-color: #d9d9d9;
 
     .text {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-        .titulo {
-            // font-size: 1rem;
-            margin: 0.5rem 0;
-        }
+        .wrapper {
 
-        .descripcion-contenedor {
+            .titulo {
+                margin: 0.5rem 0;
+                font-size: 2rem;
+            }
 
-            p {
-                font-size: 1rem;            /* 17px - 18px aproximadamente */
-                line-height: 1.65;            /* Clave: un interlineado generoso facilita la lectura */
-                letter-spacing: 0.01em;       /* Un toque extra de espacio para que no se amontone */
-                margin-bottom: 1.25rem;
-                text-align: left;
+            .descripcion-contenedor {
+                padding-right: 1em;
+
+                p {
+                    line-height: 1.5;            /* Clave: un interlineado generoso facilita la lectura */
+                    font-size: 1.1rem;                    
+                }
             }
         }
+
+        footer {
+            display: flex;
+            gap: 0.3rem;
+
+            button {
+                display: flex;
+                align-self: flex-start;
+                border: none;
+                padding: 0.3em 0.5em;
+                background-color: #d9d9d9;
+                background-color: rgb(128, 128, 128, .3);
+                
+                cursor: pointer;
+                font-size: 1rem;
+                border-radius: 14px;
+                box-shadow: 0px 1px 0 0px rgb(0, 0, 0, .4);
+
+                &:hover {
+                    background-color: rgb(217, 217, 217, .8);
+                }
+            }
+        }
+
     }
 
     .img-wrapper {
         width: 50%;
         border-radius: 20px;
         overflow: hidden;
-        // border: 1px solid;
+        max-height: 300px;
+        box-shadow: 0px 1px 4px rgb(0, 0, 0, .6);
 
         img {
             width: 100%;
@@ -160,8 +193,29 @@
         
     }
 
-    &.inverse {
-        flex-direction: row-reverse;
-    }
+    // &.inverse {
+    //     flex-direction: row-reverse;
+    // }
 
+}
+
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;    
+    position: fixed;
+    inset-block-start: 0px;
+    inset-block-end: 0px;
+    max-width: calc(100% - 2em);
+    max-height: calc(100% - 2em);
+    user-select: text;
+    visibility: visible;
+    overflow: auto;
+    margin: auto; 
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.7); /* Color oscuro semi-transparente */
+        backdrop-filter: blur(4px); /* Opcional: desenfoque de fondo */
+        overflow: hidden;
+    }
 }

@@ -6,6 +6,7 @@
 
 body {
   min-height: 100vh;
+  width: 100%;
   border: 1px solid red;
 }
 
@@ -17,7 +18,7 @@ body {
   background-color: #f5f5f5;
 }
 
-header {
+.main-header {
   padding: 0;
   margin: 0;
   height: 35vh;
@@ -68,11 +69,10 @@ nav {
 
     display: flex;
     justify-content: center;
-    gap: 1px;
 
     li {
       text-align: center;
-      border-radius: 15px;
+      border-radius: 14px;
       font-size: 14px;
       line-height: 50px;
       width: 25%;
@@ -113,43 +113,62 @@ nav {
   padding: 1em;
 }
 
-// .montserrat {
-//   font-family: "Montserrat", serif;
-//   font-optical-sizing: auto;
-//   font-weight: 350;
-//   font-style: normal;
-// }
-
-// .montserrat-bold {
-//   font-family: "Montserrat", serif;
-//   font-optical-sizing: auto;
-//   font-weight: bold;
-//   font-style: normal;
-// }
-
-// .montserrat-medium {
-//   font-family: "Montserrat", serif;
-//   font-optical-sizing: auto;
-//   font-weight: 600;
-//   font-style: normal;
-// }
-
-// .montserrat-400 {
-//   font-family: "Montserrat", serif;
-//   font-optical-sizing: auto;
-//   font-weight: 400;
-//   font-style: normal;
-// }
-
 .alice-regular {
   font-family: "Alice", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.libre-franklin-regular {
-  font-family: "Libre Franklin", sans-serif;
+.alice-semibold {
+  font-family: "Alice", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.alice-bold {
+  font-family: "Alice", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.source-sans-3-regular {
+  font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
+  font-style: normal;
+}
+
+.source-sans-3-medium {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.source-sans-3-semibold {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.source-sans-3-bold {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.source-sans-3-superbold {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.source-sans-3-extrabold {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
   font-style: normal;
 }

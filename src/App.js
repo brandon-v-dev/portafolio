@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <ul className='libre-franklin-regular'>
+      <ul className='source-sans-3-medium'>
         <li>
           <NavLink to='/' className={({ isActive }) => isActive ? "active-link" : ""} end>
             Inicio
@@ -42,7 +42,7 @@ export const App = () => {
 
   return (
     <main className="portafolio">
-      <header>
+      <header className='main-header'>
         <div className='foto'>
           foto
         </div>
