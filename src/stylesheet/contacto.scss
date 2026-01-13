@@ -8,6 +8,7 @@
         max-width: 700px;
         text-align: center;
         margin: 0 auto;
+        font-size: 1.1rem;
     }
 
     .metodos-de-contacto {
@@ -15,20 +16,31 @@
         gap: 15px;
         justify-content: center;
         flex-wrap: wrap;
+        margin-top: 1.5rem;
 
         .contacto {
             display: flex;
             gap: 5px;
+            background-color: #d9d9d9;
+            border-radius: 18px;
 
-            img {
-                max-width: 25px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            align-content: center;
+            color: inherit;
+            align-content: center;
+            text-decoration: none;
+            cursor: pointer;
+
+            .icono {
+                display: flex;
+                align-items: center;
             }
-
-            a {
-                
-                color: inherit;
-                align-content: center;
-
+            
+            &:hover {
+                background-color: #2c2a2a;
+                color: #cccccc;
             }
         }
     }

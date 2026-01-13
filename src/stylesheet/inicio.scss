@@ -9,9 +9,14 @@
     gap: 25px;
 
     .texto-sobre-mi {
-        font-size: 18px;
+        // font-size: 18px;
         line-height: 1.5;
         margin: 0;
+        font-size: 1.1rem;
+
+        // line-height: 1.5;            /* Clave: un interlineado generoso facilita la lectura */
+        //             font-size: 1.1rem;
+        //             letter-spacing: -0.3px;  
         
         span {
             font-weight: 600;
