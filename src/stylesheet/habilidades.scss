@@ -1,7 +1,7 @@
 .seccion-habilidades {
     padding: 10px;
-    max-width: 900px;
-    max-width: 1100px;
+    // max-width: 900px;
+    // max-width: 1100px;
     min-width: 150px;
     width: 100%;
 
@@ -17,39 +17,95 @@
     }
 
     .introduccion-habilidad {
-        max-width: 800px;
         margin: 1rem auto 1.5rem auto;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         line-height: 1.5;
-        text-align: center;
+        
+        padding-left: 1em;
+
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        max-height: 250px;
+        border-left: 2px solid;
+
+        .img-wrap {
+            width: 30%;
+            height: 100%;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+                aspect-ratio: 1/1;
+                width: 100%;
+            }
+        }
+
     }
 
     .habilidades {
         margin-top: 1rem;
-        display: flex;
-        flex-wrap: wrap;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        
+        gap: 20px;       
+
         .habilidad-contenedor {
             margin: 0.5rem 0;
             height: auto;
+            padding: 1em;
 
             .titulo {
                 display: flex;
+                align-items: center;
                 gap: 2px;
+                text-transform: uppercase;
+                margin-bottom: 0.8rem;
+                // border: 1px solid;
+                // align-items: flex-start;
+
+                .iconos-wrap {
+                    .icono-tech {
+                        font-size: 1.2rem;
+                    }
+                }
 
                 .tecnologia-nombre {
-                    font-size: 20px;
-                    margin: 5px 0;
+                    font-size: 1.5rem;
+                    // margin: 5px 0;
+                    // border: 1px solid;
                 }
+
                 img {
                     width: 25px;
+                    
                 }
             }
 
+            .descripcion-habilidad.ul {
+                list-style: none;
+            }
+
+            .descripcion-habilidad {
+                text-align: justify;
+            }
+
             
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .seccion-habilidades {
+        .habilidades {
+            .habilidad-contenedor.color-js {
+                .titulo {
+                    align-items: start;
+
+                    .iconos-wrap {
+                        margin-top: 0.5rem;
+                    }
+                }
+            }
         }
     }
 }

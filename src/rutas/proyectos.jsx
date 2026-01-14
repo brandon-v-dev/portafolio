@@ -6,7 +6,7 @@ export const Proyectos = () => {
   return (
     <div className='seccion-proyectos'>
       <h1 className='seccion-titulo source-sans-3-extrabold'>
-        Proyectos
+        Proyectos realizados hasta la fecha
       </h1>
       <div className='proyectos'>
         {proyectos.map((p, index) => 

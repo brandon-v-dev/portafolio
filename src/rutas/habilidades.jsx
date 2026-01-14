@@ -1,72 +1,95 @@
+import { SiCss3, SiFirebase, SiGithub, SiHtml5, SiJavascript, SiRedux, SiTypescript } from 'react-icons/si';
 import '../stylesheet/habilidades.scss';
+import { FaReact } from 'react-icons/fa';
+// import '../stylesheet/habilidades.scss';
+
+const listaHabilidades = [
+  {
+    titulo: 'Fundamentos Web',
+    iconos: [<SiHtml5 key="html" />, <SiCss3 key="css" />],
+    descripcion: <>Maquetación semántica enfocada en <strong>SEO y accesibilidad</strong>. Dominio de Flexbox, CSS Grid y diseño responsivo adaptado a cualquier dispositivo.</>,
+    claseIcono: ''
+  },
+  {
+    titulo: 'JavaScript Vanilla',
+    iconos: [<SiJavascript key="js" />],
+    descripcion: <>Uso avanzado de <strong>ES6+</strong> y manipulación eficiente del <strong>DOM</strong>. Experiencia trabajando con programación asíncrona y consumo de APIs REST.</>,
+    claseIcono: 'color-js'
+  },
+  {
+    titulo: 'React.js',
+    iconos: [<FaReact key="react" />],
+    descripcion: (
+      <>
+        Desarrollo de componentes funcionales y uso de Hooks (useState, useEffect, useMemo).
+        <br />
+        Renderizado condicional y manejo de rutas con React Router.
+      </>
+    ),
+    claseIcono: 'color-react'
+  },
+  {
+    titulo: 'TypeScript',
+    iconos: [<SiTypescript key="ts" />],
+    descripcion: <>Tipado estático para asegurar la integridad de datos y mejorar la mantenibilidad del código en proyectos escalables.</>,
+    claseIcono: 'color-ts'
+  },
+  {
+    titulo: 'Gestión de Estado',
+    iconos: [<SiRedux key="redux" />],
+    descripcion: <>Arquitectura de estados globales utilizando <strong>Redux Toolkit</strong> y <strong>Zustand</strong> para un flujo de datos predecible y eficiente.</>,
+    claseIcono: 'color-redux'
+  },
+  {
+    titulo: 'Ecosistema y Herramientas',
+    iconos: [<SiGithub key="github" />, <SiFirebase key="firebase" />],
+    descripcion: <>Control de versiones con <strong>Git/GitHub</strong>. Estilizado con <strong>SASS/Bootstrap</strong> e integración básica de backend con <strong>Firebase</strong> y <strong>Supabase</strong>.</>,
+    claseIcono: 'color-fb'
+  }
+];
 
 export const Habilidades = () => {
   return (
-    <div className='seccion-habilidades'>
+    <section className='seccion-habilidades'>
+      <header className='introduccion-habilidad source-sans-3-semibold'>
+        <h2>
+          Desarrollador Frontend con bases sólidas en JavaScript moderno (ES6+), manipulación del DOM y maquetación.
+        </h2>
 
-      <h3 className='introduccion-habilidad source-sans-3-semibold'>
-        Conozco y comprendo las bases de la programación, anteriormente he trabajado en proyectos personales y practicas con solamente html, css y js vanilla. Por lo tanto sé del dom, manipularlo y trabajar ‘nativamente’. 
-      </h3>
+        <div className='img-wrap'>
+          {/* <img 
+            alt='imagen'
+            src='https://w0.peakpx.com/wallpaper/737/721/HD-wallpaper-tag-code-hacker-programming-javascript-python-coder-software-coding-computer-science-css-web-design-html-linux-html5-programmer-laptop-tech-php-developer-thumbnail.jpg'
+          /> */}
+        </div>
+      </header>
 
       <div className='habilidades'>
-        <div className='habilidad-contenedor source-sans-3-regular'>
-          <div className='titulo'>
-          <img src='/imgs/iconos/icon-react.svg' alt='icono de react'></img>
-
-            <p className='tecnologia-nombre'>
-              React
+        {listaHabilidades.map((habilidad, index) => (
+          <div className={`habilidad-contenedor ${habilidad.claseIcono}`} key={index}>
+            <div className='titulo alice-semibold'>
+              <div className='iconos-wrap'>
+                {habilidad.iconos.map((Icono, idx) => (
+                  <span key={idx} className={`icono-tech ${habilidad.claseIcono}`}>
+                    {Icono}
+                  </span>
+                ))}
+              </div>
+              <p className='tecnologia-nombre source-sans-3-semibold'>
+                {habilidad.titulo}
+              </p>
+            </div>
+            <p className='descripcion-habilidad source-sans-3-regular body-text'>
+              {habilidad.descripcion}
             </p>
           </div>
-          <p className='descripcion-habilidad source-sans-3-regular body-text'> {/* IMPORTANTE: VENDERME MÁS PARA GANAR LA ATENCION DE RECLUTADORES*/}
-            Tengo conociemientos solidos en react, he trabajado en proyectos personales y practicas
-            con esta libreria. <span className=''>Me gusta trabajar con react porque me permite </span>
-            escribir codigo limpio y escalable, ademas de que me permite crear interfaces de usuario de manera eficiente y modular.
-            <br /> <br />
-          </p>
-        </div>
-
-        <div className='habilidad-contenedor'>
-          
-          <div className='titulo'>
-            <img src='/imgs/iconos/icon-typescript.svg'></img>
-          <p className='tecnologia-nombre'>
-            Typescript
-          </p>
-          </div>
-          <p className='descripcion-habilidad source-sans-3-regular body-text'>
-            Aprendizaje en curso tambien, utilizo typescript para <span className='montserrat-medium'>escribir codigo organizado y 
-            escalable</span>, desde que aprendí del tipado, me acostumbré a usarlo y ahora se me hace raro 
-            escribir codigo sin tipar nada o sin saber que espera una función :’).
-          </p>
-        </div>
-
-        <div className='habilidad-contenedor'>
-          <div className='titulo'>
-            <img src='/imgs/iconos/icon-redux.svg' alt='icono de redux' />
-            <p className='tecnologia-nombre'>
-              Redux toolkit y zustand
-            </p>
-          </div>
-          
-          <p className='descripcion-habilidad source-sans-3-regular body-text'>
-            {/* He usado zustand y redux, para hacer proyectos interactivos y evitar pasar props innecesarias. */}
-            He trabajado con redux toolkit y zustand, me gusta trabajar con zustand porque
-            me permite tener un estado global y manejarlo de forma eficiente, ademas de que me permite
-            escribir menos codigo y mantener una estructura clara en mis aplicaciones.
-          </p>
-        </div>
-
-        <div className='habilidad-contenedor'>
-          <div className='titulo'>
-            <p className='tecnologia-nombre'>
-              Otros
-            </p>
-          </div>
-          <p className='descripcion-habilidad source-sans-3-regular body-text'>
-            Git y Github básico. Bootstrap, sass. Recurisividad. En una ocasión usé firebase para poder tener usuarios en una app (weather app).
-          </p>
-        </div>
+        ))}
       </div>
-    </div>
-  )
-}
+
+      {/* <div className='test alice-bold'>
+        Desarrollador Frontend enfocado en crear interfaces dinámicas y eficientes. 
+        Cuento con bases sólidas en JavaScript moderno (ES6+), manipulación del DOM y maquetación avanzada.
+      </div> */}
+    </section>
+  );
+};

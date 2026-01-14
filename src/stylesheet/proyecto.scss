@@ -118,7 +118,17 @@ dialog {
             align-items: center;
             padding: 1.5rem 2rem;
             background: #f8f9fa;
-            border-bottom: 1px solid #eee;
+            // border-bottom: 1px solid #eee;
+            // border-bottom: 2px solid black;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 90%;
+                border-bottom: 2px solid black;
+                position: absolute;
+                top: 100%;
+            }
 
             h2 { 
                 margin: 0; 

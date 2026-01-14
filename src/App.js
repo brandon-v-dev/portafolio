@@ -42,13 +42,13 @@ export const App = () => {
 
   return (
     <main className="portafolio">
-      <header className='main-header'>
+      {/* <header className='main-header'>
         <div className='foto'>
           foto
         </div>
         <p className='alice-regular mi-nombre'>Brandon Leyder</p>
         <p className='alice-regular descripcion'>Desarrollador web jr</p>
-      </header>
+      </header> */}
       <Navbar>
         
       </Navbar>

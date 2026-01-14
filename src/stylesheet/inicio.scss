@@ -13,18 +13,29 @@
         line-height: 1.5;
         margin: 0;
         font-size: 1.1rem;
-
-        // line-height: 1.5;            /* Clave: un interlineado generoso facilita la lectura */
-        //             font-size: 1.1rem;
-        //             letter-spacing: -0.3px;  
-        
-        span {
-            font-weight: 600;
-        }
+        font-size: 1.2rem;        
     }
 
     .texto-sobre-mi:nth-child(1) {
         grid-column: 1/-1;
+        border-left: 2px solid;
+        padding-left: 1em;
+        
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        // display: flex;
+        // flex-direction: column;
+        // gap: 0.5rem;
+        // border: 1px solid;
+
+        span {
+            font-size: 3rem;
+            line-height: 0.95;
+            // border: 1px solid;
+            // margin: 2rem;
+        }
     }
 
     .texto-sobre-mi:nth-child(2) {
