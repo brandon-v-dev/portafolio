@@ -1,7 +1,5 @@
 .seccion-habilidades {
     padding: 10px;
-    // max-width: 900px;
-    // max-width: 1100px;
     min-width: 150px;
     width: 100%;
 
@@ -17,17 +15,13 @@
     }
 
     .introduccion-habilidad {
-        margin: 1rem auto 1.5rem auto;
-        font-size: 1.3rem;
-        line-height: 1.5;
-        
         padding-left: 1em;
-
-        display: flex;
-        gap: 2rem;
-        align-items: flex-start;
-        max-height: 250px;
         border-left: 2px solid;
+
+        h2 {
+            font-size: 3rem;
+            line-height: 0.95;
+        }
 
         .img-wrap {
             width: 30%;
@@ -47,7 +41,7 @@
         margin-top: 1rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 20px;       
+        gap: 20px;  
 
         .habilidad-contenedor {
             margin: 0.5rem 0;
@@ -75,10 +69,7 @@
                     // border: 1px solid;
                 }
 
-                img {
-                    width: 25px;
-                    
-                }
+                
             }
 
             .descripcion-habilidad.ul {
@@ -87,6 +78,7 @@
 
             .descripcion-habilidad {
                 text-align: justify;
+                
             }
 
             
@@ -103,6 +95,58 @@
 
                     .iconos-wrap {
                         margin-top: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .seccion-habilidades {
+
+        .introduccion-habilidad {
+            h2 {
+                overflow-wrap: break-word;
+                word-break: break-word;
+                hyphens: auto;
+                font-size: 2.2rem;
+                line-height: 1.1;
+            }
+        }
+
+        .habilidades {
+            grid-template-columns: 1fr;
+            gap: 0;
+
+            .habilidad-contenedor {
+                margin: 0;
+
+                .titulo {
+
+                    .iconos-wrap {
+                        .icono-tech {
+                            font-size: 1.1rem;
+                        }
+                    }
+
+                    .tecnologia-nombre {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .descripcion-habilidad {
+                    overflow-wrap: break-word;
+                    font-size: 15px;
+                }
+            }
+
+            .habilidad-contenedor.color-js {
+                .titulo {
+                    align-items: center;
+
+                    .iconos-wrap {
+                        margin: 0;
                     }
                 }
             }

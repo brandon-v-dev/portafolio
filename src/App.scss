@@ -10,6 +10,7 @@
   --color-tinta: #1A1A1A;
   --color-linea: rgba(26, 26, 26, 0.2);
 }
+
 body {
   min-height: 100vh;
   width: 100%;
@@ -23,7 +24,6 @@ body {
   min-height: 100vh;
   background-color: #f5f5f5;
   background-color: var(--color-papel);
-  // background-color: #ccc;
 }
 
 .main-header {
@@ -34,7 +34,6 @@ body {
   margin: 0 auto;
   background-color: #d9d9d9;
   align-content: center;
-  // border-bottom: 5px double;
 
   .foto {
     border: 1px solid;
@@ -66,12 +65,12 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 1em;
-  // border-bottom: 5px double;
-  // border-top: 5px double;
+  
   width: 80%;
   margin: 0 auto;
 
   ul {
+    
     list-style: none;
     background-color: #d9d9d9;
     border-radius: 20px;
@@ -124,6 +123,7 @@ nav {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
+  // border: 1px solid green;
 }
 
 .body-text {
@@ -194,14 +194,43 @@ nav {
 
 @media screen and (max-width: 480px) {
   nav {
+    width: 95%;
+    padding: 1em 0;
+
     ul {
+      max-width: 100%;
+      width: 100%;
+
       li {
         a {
-          border: 1px solid;
           text-overflow: ellipsis;
           overflow: hidden;
           width: 100%;
           font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  nav {
+    ul {
+      li {
+        a {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  nav {
+    ul {
+      li {
+        a {
+          font-size: 0.8rem;
         }
       }
     }

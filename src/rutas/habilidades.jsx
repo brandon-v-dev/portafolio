@@ -56,12 +56,9 @@ export const Habilidades = () => {
           Desarrollador Frontend con bases sólidas en JavaScript moderno (ES6+), manipulación del DOM y maquetación.
         </h2>
 
-        <div className='img-wrap'>
-          {/* <img 
-            alt='imagen'
-            src='https://w0.peakpx.com/wallpaper/737/721/HD-wallpaper-tag-code-hacker-programming-javascript-python-coder-software-coding-computer-science-css-web-design-html-linux-html5-programmer-laptop-tech-php-developer-thumbnail.jpg'
-          /> */}
-        </div>
+        {/* <div className='img-wrap'>
+          
+        </div> */}
       </header>
 
       <div className='habilidades'>
@@ -85,11 +82,6 @@ export const Habilidades = () => {
           </div>
         ))}
       </div>
-
-      {/* <div className='test alice-bold'>
-        Desarrollador Frontend enfocado en crear interfaces dinámicas y eficientes. 
-        Cuento con bases sólidas en JavaScript moderno (ES6+), manipulación del DOM y maquetación avanzada.
-      </div> */}
     </section>
   );
 };
