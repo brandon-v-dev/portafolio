@@ -94,8 +94,9 @@ export const Proyecto = ({id, nombreProyecto, mockups, link, descripcion, detall
         <h2 className='titulo alice-bold'>
           {nombreProyecto}
         </h2>
-        {mockups.map(m => 
+        {mockups.map((m, index) => 
           <img 
+            key={index}
             src={m}
           />
         )}

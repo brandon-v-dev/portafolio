@@ -5,29 +5,51 @@ import { Proyectos } from './rutas/proyectos';
 import { Contacto } from './rutas/contacto';
 
 import { Route, Routes, Link, useLocation, NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Navbar = () => {
+
+  const location = useLocation();
+  const hash = location.hash;
+
+  const esLaSeccionActual = (seccion) => {
+    const seccionActual = hash.replace('#', '');
+
+    return seccionActual === seccion ? 'active-link' : '';
+  }
 
   return (
     <nav>
       <ul className='source-sans-3-medium'>
         <li>
-          <NavLink to='/' className={({ isActive }) => isActive ? "active-link" : ""} end>
+          <NavLink 
+            to='/' 
+            className={`${esLaSeccionActual('')}`}
+          >
             Inicio
           </NavLink>
         </li>
         <li>
-          <NavLink to='/proyectos' className={({ isActive }) => isActive ? "active-link" : ""} end> 
+          <NavLink 
+            to='#proyectos' 
+            className={`${esLaSeccionActual('proyectos')}`}
+          > 
             Proyectos
           </NavLink>
         </li>
         <li>
-          <NavLink to='/habilidades' className={({ isActive }) => isActive ? "active-link" : ""} end>
+          <NavLink 
+            to='#habilidades' 
+            className={`${esLaSeccionActual('habilidades')}`}
+          >
             Habilidades
           </NavLink>  
         </li>
         <li>
-          <NavLink to='/contacto' className={({ isActive }) => isActive ? "active-link" : ""} end>
+          <NavLink 
+            to='#contacto' 
+            className={`${esLaSeccionActual('contacto')}`}
+          >
             Contacto
           </NavLink>
         </li>
@@ -38,27 +60,43 @@ const Navbar = () => {
 
 export const App = () => {
 
-  const location = useLocation();
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ 
+            behavior: 'smooth' 
+          });
+        }, 0);
+      }
+    } else {
+      const element = document.getElementById('inicio');
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ 
+            behavior: 'smooth' 
+          });
+        }, 0);
+      }
+    }
+  }, [hash]);
 
   return (
     <main className="portafolio">
-      {/* <header className='main-header'>
-        <div className='foto'>
-          foto
-        </div>
-        <p className='alice-regular mi-nombre'>Brandon Leyder</p>
-        <p className='alice-regular descripcion'>Desarrollador web jr</p>
-      </header> */}
-      <Navbar>
-        
-      </Navbar>
+      <Navbar />
       <div className='contenedor-principal'>
-        <Routes>
-          <Route path='/' element={<Inicio />}></Route>
-          <Route path='/proyectos' element={<Proyectos />}></Route>
-          <Route path='/habilidades' element={<Habilidades />}/>
-          <Route path='/contacto' element={<Contacto />}></Route>
-        </Routes>
+
+        <Inicio />
+        <Proyectos />
+        <Habilidades />
+        <Contacto />
+
       </div>
     </main>
   );

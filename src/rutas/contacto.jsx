@@ -23,15 +23,19 @@ const metodosDeContactos = [
 export const Contacto = () => {
 
     return (
-        <div className='seccion-contacto'>
-            <p className='introduccion-contacto source-sans-3-regular'>
+        <section id='contacto' className='seccion-contacto'>
+            <h1 className='source-sans-3-semibold'>
+                Contacto
+            </h1>
+            <p className='introduccion-contacto source-sans-3-semibold'>
                 Estoy abierto a nuevas oportunidades y proyectos. 
                 Si tienes una consulta o simplemente quieres saludar, no dudes en escribirme.
             </p>
 
             <div className='metodos-de-contacto'>
-                {metodosDeContactos.map(m => 
+                {metodosDeContactos.map((m, index) => 
                     <a 
+                        key={index}
                         href={m.link} 
                         target={m.link.startsWith('http') ? '_blank' : '_self'}
                         rel='noreferrer'
@@ -41,6 +45,6 @@ export const Contacto = () => {
                     </a>
                 )}
             </div>
-        </div>
+        </section>
     )
 }

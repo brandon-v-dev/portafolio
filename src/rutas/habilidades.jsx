@@ -50,15 +50,13 @@ const listaHabilidades = [
 
 export const Habilidades = () => {
   return (
-    <section className='seccion-habilidades'>
+    <section id='habilidades' className='seccion-habilidades'>
       <header className='introduccion-habilidad source-sans-3-semibold'>
-        <h2>
+        {/* <h2>
           Desarrollador Frontend con bases sólidas en JavaScript moderno (ES6+), manipulación del DOM y maquetación.
-        </h2>
+        </h2> */}
 
-        {/* <div className='img-wrap'>
-          
-        </div> */}
+        <h2>Habilidades</h2>
       </header>
 
       <div className='habilidades'>

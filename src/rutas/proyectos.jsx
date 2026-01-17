@@ -4,9 +4,9 @@ import { proyectos } from '../utils/proyectos';
 
 export const Proyectos = () => {
   return (
-    <div className='seccion-proyectos'>
+    <section id='proyectos' className='seccion-proyectos'>
       <h1 className='seccion-titulo source-sans-3-extrabold'>
-        Proyectos realizados hasta la fecha
+        Proyectos
       </h1>
       <div className='proyectos'>
         {proyectos.map((p, index) => 
@@ -24,6 +24,6 @@ export const Proyectos = () => {
           />
         )}
       </div>
-    </div>
+    </section>
   )
 }
