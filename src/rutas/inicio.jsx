@@ -1,4 +1,4 @@
-import { FaGithub, FaGithubSquare } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import '../stylesheet/inicio.scss';
 import { AiFillLinkedin } from 'react-icons/ai';
 
@@ -12,12 +12,18 @@ export const Inicio = () => {
                     ¡HOLA! SOY BRANDON VELAZQUEZ
                 </h2>
                 <div className='iconos'>
-                    <a>
+                    <a 
+                        href='https://www.linkedin.com/in/brandon-vel%C3%A1zquez-661a69337/'
+                        target='_blank'
+                    >
                         <span>
                             <AiFillLinkedin />
                         </span>
                     </a>
-                    <a>
+                    <a 
+                        href='https://github.com/brandon-v-dev'
+                        target='_blank'
+                    >
                         <span>
                             <FaGithub />
                         </span>
