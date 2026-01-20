@@ -86,7 +86,7 @@ export const proyectos = [
   },
   {
     id: 'kanban-app',
-    nombre: 'Gestor De Tareas Basada En Kanban.',
+    nombre: 'Gestor De Tareas',
     mockups: [kanbanAppMockup],
     link: 'https://kanbax.vercel.app/',
     descripcion: (

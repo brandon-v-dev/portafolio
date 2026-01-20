@@ -34,9 +34,9 @@ export const Inicio = () => {
                 </p>
             </div>
             
-            <div className='contenedor sugerencia'>
+            {/* <div className='contenedor sugerencia'>
                 
-            </div>
+            </div> */}
         </section>
     )
 }

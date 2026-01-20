@@ -74,18 +74,18 @@ export const Proyecto = ({id, nombreProyecto, mockups, link, descripcion, detall
             {nombreProyecto}
           </h2>
           <div className='descripcion-contenedor source-sans-3-regular'>
-            {descripcion}
+              {descripcion}
           </div>
         </div>
         
         <footer>
           <button 
-            className='btn-abrir-detalles source-sans-3-semibold'
+            className='btn-abrir-detalles source-sans-3-regular'
             onClick={abrirModal}
           >
             Detalles
           </button>
-          <button className='btn-ir-al-proyecto source-sans-3-semibold'>
+          <button className='btn-ir-al-proyecto source-sans-3-regular'>
             <a href={link} target='_blank'>Ir al proyecto</a>
           </button>
         </footer>
