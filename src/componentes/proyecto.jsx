@@ -98,6 +98,7 @@ export const Proyecto = ({id, nombreProyecto, mockups, link, descripcion, detall
           <img 
             key={index}
             src={m}
+            alt='vista previa del proyecto'
           />
         )}
       </div>
