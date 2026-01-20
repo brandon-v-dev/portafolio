@@ -86,7 +86,7 @@ export const Proyecto = ({id, nombreProyecto, mockups, link, descripcion, detall
             Detalles
           </button>
           <button className='btn-ir-al-proyecto source-sans-3-regular'>
-            <a href={link} target='_blank'>Ir al proyecto</a>
+            <a href={link} target='_blank' rel='noreferrer'>Ir al proyecto</a>
           </button>
         </footer>
       </div>
