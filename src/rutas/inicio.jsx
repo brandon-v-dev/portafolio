@@ -15,6 +15,7 @@ export const Inicio = () => {
                     <a 
                         href='https://www.linkedin.com/in/brandon-vel%C3%A1zquez-661a69337/'
                         target='_blank'
+                        rel='noreferrer'
                     >
                         <span>
                             <AiFillLinkedin />
@@ -23,6 +24,7 @@ export const Inicio = () => {
                     <a 
                         href='https://github.com/brandon-v-dev'
                         target='_blank'
+                        rel='noreferrer'
                     >
                         <span>
                             <FaGithub />

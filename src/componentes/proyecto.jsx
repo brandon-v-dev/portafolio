@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useState } from 'react';
+import { forwardRef, useRef } from 'react';
 import '../stylesheet/proyecto.scss';
 
 const ModalDetalles = forwardRef(({ id, cerrar, nombreProyecto, detalles, features, tecnologias }, ref) => {
