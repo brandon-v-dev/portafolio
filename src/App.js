@@ -4,7 +4,7 @@ import { Inicio } from './rutas/inicio';
 import { Proyectos } from './rutas/proyectos';
 import { Contacto } from './rutas/contacto';
 
-import { Route, Routes, Link, useLocation, NavLink } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const Navbar = () => {
